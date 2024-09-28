@@ -123,6 +123,10 @@ class Node {
     await this.fileManager.deleteFile(fileName);
     console.log(`File ${fileName} deleted from local storage`);
   }
+
+  async verifyFileIntegrity(fileName) {
+    return await this.fileManager.verifyFileIntegrity(fileName);
+  }
 }
 
 module.exports = Node;

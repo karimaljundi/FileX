@@ -98,6 +98,7 @@ class FileManager {
 
   async verifyFileIntegrity(fileName) {
     const fileInfo = await this.getFileInfo(fileName);
+    // error handling
     if (!fileInfo) {
       throw new Error(`File ${fileName} not found`);
     }
